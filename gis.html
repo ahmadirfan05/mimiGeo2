@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judul Halaman Anda</title>
+    
+    
+    <link rel="stylesheet" href="leaflet.css">
+    <script src="leaflet.js"></script>
+    
+    <style>
+        
+        #map { height: 400px; }
+    </style>
+</head>
+<body>
+    
+    <div id="map"></div>
+    
+    <script>
+         
+        var map = L.map('map').setView([-8.268624, 116.552753], 11);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        
+         var masjidbuse = L.marker([-8.694462, 116.291012]).addTo(map);
+         var sdnbuse = L.marker([-8.695184, 116.290431]).addTo(map);
+         var miebuse = L.marker([-8.692018, 116.292970]).addTo(map);
+         var toko = L.marker([-8.697754, 116.288235]).addTo(map);
+         var kantordesa = L.marker([-8.690203, 116.294785]).addTo(map);
+
+         
+          masjidbuse.bindPopup("<b>masjid</b><br>buse").openPopup();
+          sdnbuse.bindPopup("<b>SD</b><br>buse").openPopup();
+          miebuse.bindPopup("<b>mie</b><br>ayam").openPopup();
+          toko.bindPopup("<b>toko</b><br>pakaian").openPopup();
+          Kantordesa.bindPopup("<b>Kantor desa</b><br>bunut baok").openPopup();
+    </script>
+</body>
+</html>
